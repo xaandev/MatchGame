@@ -1,0 +1,35 @@
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+	<script>
+		MatchGame.generateCardValues = function () {
+			var begin_array = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
+			var end_array = [];
+			var y = 16;
+			var z;
+			console.log(begin_array);
+			
+			for (x=0; x < 16; x++) {
+				z = Math.floor(Math.random() * y);
+				end_array(x) = begin_array(z);
+				begin_array.splice(z, 1);
+				y--;
+			}
+				
+			return end_array;
+		};
+
+		console.log()
+		console.log(Matchgame.generateCardValues());
+	</script>
+		
+</body>
+
+</html>
