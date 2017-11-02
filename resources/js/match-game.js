@@ -8,6 +8,12 @@ $(document).ready(function() {
 	var $game = $("#game");
 	var cards = MatchGame.generateCardValues();
 	MatchGame.renderCards(cards, $game);
+	
+	$('button').click(function() {
+		var $game = $("#game");
+		var cards = MatchGame.generateCardValues();
+		MatchGame.renderCards(cards, $game);
+	});
 });
 
 /*
