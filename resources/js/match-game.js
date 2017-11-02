@@ -37,8 +37,7 @@ MatchGame.generateCardValues = function () {
 
 MatchGame.renderCards = function(cardValues, $game) {
 	$game.empty();
-	$game.data('flipped_cards', []);
-	
+	$game.data('flipped_cards', []); 
 	var colors = ["hsl(25,85%,65%)","hsl(55,85%,65%)","hsl(90,85%,65%)","hsl(160,85%,65%)",
 				  "hsl(220,85%,65%)","hsl(265,85%,65%)","hsl(310,85%,65%)","hsl(360,85%,65%)"];
 	
@@ -51,10 +50,10 @@ MatchGame.renderCards = function(cardValues, $game) {
 			flipped: false
 		};
 		
-		var $card1 = $('<div class="col-xs-3 card"></div>');
-		$card1.data(data);
+		var $card = $('<div class="col-3 card"></div>');
+		$card.data(data);
 		
-		$game.append($card1);
+		$game.append($card);
 	}
 	
 	$('.card').click(function() {
